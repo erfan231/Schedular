@@ -1,0 +1,152 @@
+{
+  "questions": [
+    {
+      "question": "What time do you typically wake up on weekdays?",
+      "answers": [
+        { "text": "Before 6:00 AM", "code": ["Morning"] },
+        { "text": "Between 6:00 AM and 7:00 AM", "code": ["Morning"] },
+        { "text": "Between 7:00 AM and 8:00 AM", "code":[ "Morning"] },
+        { "text": "After 8:00 AM", "code": ["Afternoon", "evening"] }
+      ]
+    },
+    {
+      "question": "What time do you typically wake up on weekends?",
+      "answers": [
+        { "text": "Before 6:00 AM", "code": ["Morning"] },
+        { "text": "Between 6:00 AM and 7:00 AM", "code": ["Morning"] },
+        { "text": "Between 7:00 AM and 8:00 AM", "code": ["Morning"] },
+        { "text": "After 8:00 AM", "code": ["Afternoon", "evening"] }
+      ]
+    },
+    {
+      "question": "What time do you usually go to bed on weekdays?",
+      "answers": [
+        { "text": "Before 9:00 PM", "code": ["Morning","Afternoon"] },
+        { "text": "Between 9:00 PM and 10:00 PM", "code": ["Morning","Afternoon"] },
+        { "text": "Between 10:00 PM and 11:00 PM", "code": ["evening"] },
+        { "text": "After 11:00 PM", "code": ["evening"] }
+      ]
+    },
+    {
+      "question": "What time do you usually go to bed on weekends?",
+      "answers": [
+        { "text": "Before 9:00 PM", "code": ["Morning","Afternoon"] },
+        { "text": "Between 9:00 PM and 10:00 PM", "code": ["morning","Afternoon"] },
+        { "text": "Between 10:00 PM and 11:00 PM", "code": ["evening"] },
+        { "text": "After 11:00 PM", "code": ["evening"] }
+      ]
+    },
+    {
+      "question": "How energetic and alert do you feel in the morning?",
+      "answers": [
+        { "text": "Very Energetic", "code": ["Morning"] },
+        { "text": "Moderately Energetic", "code": ["afternoon"]},
+        { "text": "Not Energetic at All", "code": ["evening"] }
+      ]
+    },
+    {
+      "question": "How do your energy levels change during the afternoon?",
+      "answers": [
+        { "text": "I feel most energetic in the afternoon", "code": ["afternoon"] },
+        { "text": "My energy levels are consistent throughout the day", "code": ["morning", "Afternoon", "evening"] },
+        { "text": "I tend to feel tired or sluggish in the afternoon", "code": ["morning"]}
+      ]
+    },
+    {
+      "question": "How do you feel in the evening and at night?",
+      "answers": [
+        { "text": "I'm most alert and energetic at night", "code": ["Evening"] },
+        { "text": "My energy levels decline gradually in the evening", "code": ["Morning"] },
+        { "text": "I'm usually tired and ready to sleep early in the evening", "code": ["Morning"] }
+      ]
+    },
+    {
+      "question": "During which part of the day do you feel most productive?",
+      "answers": [
+        { "text": "Morning", "code": ["Morning"] },
+        { "text": "Afternoon", "code": ["Afternoon"] },
+        { "text": "Evening", "code":[ "Evening"] }
+      ]
+    },
+    {
+      "question": "Do you need caffeine or other stimulants to feel awake in the morning?",
+      "answers": [
+        { "text": "Yes, I rely on caffeine in the morning", "code": ["Afternoon", "Evening"] },
+        { "text": "No, I don't need caffeine to wake up", "code": ["Morning"] }
+      ]
+    },
+    {
+      "question": "How well do you typically sleep at night?",
+      "answers": [
+        { "text": "I sleep deeply and soundly", "code": ["Night", "Morning", "Afternoon"] },
+        { "text": "I wake up frequently during the night", "code": ["Afternoon", "Evening"] },
+        { "text": "I have trouble falling asleep or staying asleep", "code":[ "Night"] }
+      ]
+    },
+    {
+      "question": "When do you prefer to socialize or spend time with friends?",
+      "answers": [
+        { "text": "Morning", "code": ["Morning"] },
+        { "text": "Afternoon", "code": ["Afternoon"] },
+        { "text": "Evening", "code": ["Evening"] }
+      ]
+    },
+    {
+      "question": "What time of day do you find it easiest to focus on work or study?",
+      "answers": [
+        { "text": "Morning", "code": ["Morning" ]},
+        { "text": "Afternoon", "code": ["Afternoon"] },
+        { "text": "Evening", "code": ["Evening"] }
+      ]
+    },
+
+    {
+      "question": "Considering only your “feeling best” rhythm, at what time would you wake up if you were entirely free to plan your day?",
+      "answers": [
+        { "text": "5:00-6:30 a.m.", "code": ["Morning"] },
+        { "text": "6:30-7:45 a.m.", "code": ["Morning"] },
+        { "text": "7:45-9:45 a.m.", "code": ["Afternoon", "Evening"] },
+        { "text": "9:45-11:00 a.m.", "code": ["Afternoon", "Evening"] },
+        { "text": "11:00 a.m.-12:00 (noon)", "code": ["Afternoon", "Evening"] }
+      ]
+    },
+    {
+      "question": "During the first half-hour after waking in the morning, how tired do you feel?",
+      "answers": [
+        { "text": "Very tired", "code": ["Afternoon", "Evening"] },
+        { "text": "Fairly tired", "code": ["Afternoon", "Evening"] },
+        { "text": "Fairly refreshed", "code": ["Morning", "Afternoon"] },
+        { "text": "Very refreshed", "code": ["Morning", "Afternoon"] }
+      ]
+    },
+    {
+      "question": "At what time in the evening do you feel tired and in need of sleep?",
+      "answers": [
+        { "text": "8:00-9:00 p.m.", "code": ["Morning", "Afternoon"] },
+        { "text": "9:00-10:15 p.m.", "code": ["Afternoon"] },
+        { "text": "10:15 p.m.-12:30 a.m.", "code": ["Afternoon", "Evening"]},
+        { "text": "12:30-1:45 a.m.", "code": ["Evening"] },
+        { "text": "1:45-3:00 a.m.", "code": ["Evening"] }
+      ]
+    },
+    {
+      "question": "At what time of day do you think that you reach your “feeling best” peak?",
+      "answers": [
+        { "text": "5–8 AM", "code": ["Morning"] },
+        { "text": "8–10 AM", "code": ["Morning"] },
+        { "text": "10 AM–5 PM", "code": ["Afternoon"] },
+        { "text": "5–10 PM", "code": ["Afternoon", "Evening"] },
+        { "text": "10 PM–5 AM ", "code": ["Evening"] }
+      ]
+    },
+    {
+      "question": "One hears about “morning” and “evening” types of people. Which one of these types do you consider yourself to be?",
+      "answers": [
+        { "text": "Definitely a morning type.", "code": ["Morning"] },
+        { "text": "Rather more a morning type than an evening type.", "code":["Morning","Afternoon"] },
+        { "text": "Rather more an evening type than a morning type.", "code": ["Afternoon", "Evening"] },
+        { "text": "Definitely an evening type.", "code": ["Evening"] }
+      ]
+    }
+  ]
+}

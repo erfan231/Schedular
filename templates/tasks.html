@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scheduled Tasks</title>
+</head>
+<body>
+    <h1>Scheduled Tasks</h1>
+    
+    <h2>Most Productive Time</h2>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for task in most_productive_tasks %}
+        <tr>
+            <td>{{ task['Task'] }}</td>
+            <td>{{ task['Start Time'] }}</td>
+            <td>{{ task['End Time'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Second Most Productive Time</h2>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for task in second_most_productive_tasks %}
+        <tr>
+            <td>{{ task['Task'] }}</td>
+            <td>{{ task['Start Time'] }}</td>
+            <td>{{ task['End Time'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Repeat similar sections for the third most productive time if needed -->
+
+    <h2>Third Most Productive Time</h2>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for task in third_most_productive_tasks %}
+        <tr>
+            <td>{{ task['Task'] }}</td>
+            <td>{{ task['Start Time'] }}</td>
+            <td>{{ task['End Time'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
