@@ -4,6 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
+
+
+    <style>
+
+        /* Reset some default browser styles */
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Set a background color */
+    text-align: center; /* Center align content */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px; /* Increase font size */
+    margin-bottom: 20px; /* Add some space below the heading */
+    color: #333; /* Text color */
+}
+
+form {
+    background-color: #fff; /* Set a white background for the form */
+    padding: 20px;
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.question {
+    font-size: 18px; /* Increase font size for the question */
+    margin-bottom: 20px; /* Add space below the question */
+}
+
+li {
+    list-style: none; /* Remove default list bullet points */
+    margin-bottom: 10px; /* Add space between options */
+}
+
+label {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+input[type="radio"] {
+    margin-right: 5px; /* Add space between the radio button and the text */
+}
+
+input[type="submit"] {
+    background-color: #007BFF; /* Set a button color */
+    color: #fff; /* Text color for the button */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style the button on hover */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Adjust link styles as needed */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Question {{ current_index + 1 }}</h1>
@@ -26,4 +106,17 @@
         <input type="submit" value="Next">
     </form>
 </body>
+
+<footer>
+    <p>&copy; 2023 Scheduled Tasks</p>
+    <div class="footer-icons">
+        <a href="#">You</a>
+        <a href="#">Owe</a>
+        <a href="#">Erfan</a>
+        <a href="#">5$</a>
+
+
+    </div>
+</footer>
+
 </html>

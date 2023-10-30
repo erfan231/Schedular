@@ -1,95 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do List</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                max-width: 400px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #fff;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            }
-            h1 {
-                text-align: center;
-                color: #333;
-            }
-            ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            li {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid #ccc;
-                padding: 10px 0;
-            }
-            .task-text {
-                flex-grow: 1;
-            }
-            .delete-button {
-                background-color: #ff5555;
-                color: #fff;
-                border: none;
-                padding: 5px 10px;
-                cursor: pointer;
-                font-size: 14px;
-            }
-            .add-task {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 20px;
-            }
-            .add-task input[type="text"] {
-                flex-grow: 1;
-                padding: 5px;
-                border: 1px solid #ccc;
-                border-radius: 3px;
-            }
-            .add-task button {
-                background-color: #4caf50;
-                color: #fff;
-                border: none;
-                padding: 5px 10px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>To-Do List</h1>
-            <form method="POST" action="/save">
-                <label for="new-task">Add a new task:</label>
-                <input type="text" id="new-task" name="new-task" placeholder="Task name" required>
-                <select id="task-category" name="task-category">
-                    <option value="work/study">Work/Study</option>
-                    <option value="leisure">Leisure</option>
-                    <option value="sleep">Sleep</option>
-                </select>
-                <button type="submit">Add</button>
-            </form>
-            <ul id="task-list">
-                {% for task in tasks %}
-                <li>
-                    {{ task["task"] }} - ({{ task["category"] }})
-                </li>
-                {% endfor %}
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .task-text {
+            flex-grow: 1;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .add-task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .add-task input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .add-task select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .add-button {
+            background-color: #4caf50; /* Green color for the "Add" button */
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .add-button:hover {
+            background-color: #45a548; /* Slightly darker green on hover */
+        }
+        .save-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .save-button:hover {
+            background-color: #0056b3;
+        }
 
-            <!-- Redirect to the calendar-->
-            <form method="POST" action="/calendar">
-                <button type="submit">Save</button>
-            </form>
-        </div>
-    </body>
-    </html>
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Adjust link styles as needed */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form method="POST" action="/save">
+            <label for="new-task">Add a new task:</label>
+            <input type="text" name="new-task" placeholder="Task name" required>
+            <select name="task-category">
+                <option value="work/study">Work/Study</option>
+                <option value="leisure">Leisure</option>
+                <option value="sleep">Sleep</option>
+            </select>
+            <button class="add-button" type="submit">Add</button>
+        </form>
+        <ul id="task-list">
+            {% for task in tasks %}
+            <li>
+                <span class="task-text">{{ task["task"] }}</span>
+                <span class="task-category">({{ task["category"] }})</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Enhanced "Save" button -->
+        <form method="POST" action="/calendar">
+            <button class="save-button" type="submit">Save</button>
+        </form>
+    </div>
+</body>
+
+
+<footer>
+    <p>&copy; 2023 Scheduled Tasks</p>
+    <div class="footer-icons">
+        <a href="#">You</a>
+        <a href="#">Owe</a>
+        <a href="#">Erfan</a>
+        <a href="#">5$</a>
+
+
+    </div>
+</footer>
+
+</html>

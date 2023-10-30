@@ -2,6 +2,61 @@
 <html>
 <head>
     <title>Scheduled Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+        h2 {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Adjust link styles as needed */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Scheduled Tasks</h1>
@@ -38,7 +93,7 @@
         {% endfor %}
     </table>
 
-    <!-- Repeat similar sections for the third most productive time if needed -->
+    <!-- Add similar sections for the third most productive time if needed -->
 
     <h2>Third Most Productive Time</h2>
     <table>
@@ -56,4 +111,18 @@
         {% endfor %}
     </table>
 </body>
+
+
+<footer>
+    <p>&copy; 2023 Scheduled Tasks</p>
+    <div class="footer-icons">
+        <a href="#">You</a>
+        <a href="#">Owe</a>
+        <a href="#">Erfan</a>
+        <a href="#">5$</a>
+
+
+    </div>
+</footer>
+
 </html>
